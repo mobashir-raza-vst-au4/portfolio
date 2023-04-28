@@ -1,11 +1,32 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 
-type Props = {}
+interface ExperienceCardProps {
+  data: {
+    id: number;
+    company: string;
+    role: string;
+    logo: string;
+    technologies: {
+      id: number;
+      logo: string;
+      title: string;
+    }[];
+    summary: string[];
+    startDate: string;
+    endDate: string;
+  };
+}
 
-export default function ExperienceCard({ }: Props) {
+export default function ExperienceCard({ data }: ExperienceCardProps) {
+  const modifiedDate = (date: string) => {
+    const dateObj = new Date(date);
+    const formattedDate = dateObj.toLocaleString('en-us', { month: 'short', year: 'numeric' });
+    return formattedDate;
+  }
+
   return (
-    <article className='flex flex-col flex-shrink-0 items-center space-y-7 rounded-lg w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] text-gray-400 p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article key={data.id} className='flex flex-col flex-shrink-0 items-center space-y-7 rounded-lg w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] text-gray-400 p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
       <motion.img
         initial={{
           y: -100,
@@ -21,37 +42,37 @@ export default function ExperienceCard({ }: Props) {
         viewport={{
           once: true
         }}
-        className='w-16 h-16 rounded-full  object-cover object-center'
-        src='https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1'
+        className='w-16 h-16 rounded-full  object-cover object-center bg-white p-2'
+        src={data.logo}
       />
 
       <div className='px-0 md:px-10'>
-        <h4 className='text-4xl font-light'>Software Developer</h4>
-        <p className='text-2xl font-bold mt-1'>NetTantra Technologies</p>
-        <div className='flex space-x-2 my-2'>
+        <h4 className='text-4xl font-light'>{data.role}</h4>
+        <p className='text-2xl font-bold mt-1'>{data.company}</p>
+        <div className='flex flex-wrap my-2 gap-3'>
           {/* Tech used */}
-          <img
-            className='h-10 w-10 rounded-full object-cover'
-            src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="" />
-          <img
-            className='h-10 w-10 rounded-full object-cover'
-            src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="" />
-          <img
-            className='h-10 w-10 rounded-full object-cover'
-            src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="" />
+          {data.technologies.map((tech, index) => {
+            return (
+              <div key={index}>
+                <img
+                  key={index}
+                  className='h-10 w-10 rounded-full object-cover'
+                  src={tech.logo} alt="" title={tech.title} />
+
+              </div>
+            )
+          })}
         </div>
-        <p className="uppercase py-5 text-gray-300">Sep 2020 - Present</p>
+        <p className="uppercase py-5 text-gray-300">{modifiedDate(data.startDate)} - {data.endDate ? modifiedDate(data.endDate) : 'Present'}</p>
         <div className='overflow-y-auto h-52 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
           <ul className="list-disc space-y-4 ml-5 text-lg pr-5">
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
-            <li>Summary Points Summary Points Summary Points Summary</li>
+            {
+              data.summary.map((summary, index) => {
+                return (
+                  <li key={index}>{summary}</li>
+                )
+              })
+            }
           </ul>
         </div>
       </div>
