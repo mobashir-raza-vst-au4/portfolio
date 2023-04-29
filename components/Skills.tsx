@@ -126,7 +126,7 @@ export default function Skills({ }: Props) {
             transition={{
                 duration: 1.5
             }}
-            className='min-h-screen max-w-full relative flex flex-col text-center md:text-left xl:flex-row xl:px-10 xl:space-y-0 justify-center mx-auto items-center'>
+            className='h-screen max-w-full relative flex flex-col text-center md:text-left xl:flex-row xl:px-10 xl:space-y-0 justify-center mx-auto items-center'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
                 Skills
             </h3>
@@ -134,7 +134,7 @@ export default function Skills({ }: Props) {
                 Hover over a skill for current proficiency
             </h3>
 
-            <div className='grid grid-cols-4 md:grid-cols-5 gap-5'>
+            <div className='grid grid-cols-4 md:grid-cols-5 gap-5 md:mt-0 mt-12'>
                 {
                     skillsData.map((skill, index) => {
                         return (

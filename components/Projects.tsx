@@ -15,7 +15,7 @@ export default function Projects({ }: Props) {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    fade: true,
+    // fade: true,
     adaptiveHeight: true,
   };
 
@@ -74,7 +74,7 @@ export default function Projects({ }: Props) {
       }}
       className="h-screen relative overflow-hidden flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
-      <div className="w-[60%] z-20">
+      <div className="md:w-[60%] w-[80%] z-20 md:mt-0 mt-12">
         <Slider {...settings}>
           {projectsData.map((project, index) => (
             <div key={index}>
@@ -82,10 +82,10 @@ export default function Projects({ }: Props) {
                 <img
                  src={project.logo} alt="" width={500}
                 />
-                <h4 className='text-4xl font-semibold text-center'>
+                <h4 className='md:text-4xl text-xl font-semibold text-center'>
                   <span className="underline decoration-[#F7AB0A]/50">Case Study {index + 1} of {projectsData.length}:</span>{" "}{project.name}
                 </h4>
-                <p className="text-lg text-center md:text-left">
+                <p className="text-lg text-justify px-2 tablet:h-52  tablet:overflow-y-auto">
                   {project.description}
                 </p>
               </div>

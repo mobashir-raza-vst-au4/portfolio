@@ -21,32 +21,32 @@ export default function ContactMe({ }: Props) {
     };
 
     return (
-        <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
+        <div className='md:h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center md:mb-0 mb-12'>
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Contact
             </h3>
 
-            <div className="flex flex-col md:space-y-24 space-y-12 mt-36 md:mt-0">
-                <h4 className="text-4xl font-semibold text-center">
+            <div className="flex flex-col md:space-y-24 space-y-12 mt-40 md:mt-0">
+                <h4 className="md:text-4xl text-2xl font-semibold text-center">
                     I have got just what you need.{" "}
                     <span className="decoration-[#F7AB0A]/50 underline">Let's Talk.</span>
                 </h4>
                 <div className="grid grid-cols-12 items-center md:space-y-0 space-y-12">
-                    <div className="col-span-12 md:col-span-5">
-                        <div className="md:space-y-10 space-y-6 flex flex-col items-center md:items-start">
+                    <div className="col-span-12 md:col-span-5 ">
+                        <div className="md:space-y-10 space-y-6 flex flex-col items-center md:items-start md:text-2xl text-lg">
                             <div className="flex items-center justify-center space-x-5">
                                 <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-                                <a href="tel:+917003321176"><p className="text-2xl">+917003321176</p></a>
+                                <a href="tel:+917003321176"><p className="">+917003321176</p></a>
                             </div>
 
                             <div className="flex items-center justify-center space-x-5">
                                 <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-                                <a href="mailto:mdmobashirraza@gmail.com" target="_blank"><p className="text-2xl">mdmobashirraza@gmail.com</p></a>
+                                <a href="mailto:mdmobashirraza@gmail.com" target="_blank"><p className="">mdmobashirraza@gmail.com</p></a>
                             </div>
 
                             <div className="flex items-center justify-center space-x-5">
                                 <MapIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-                                <p className="text-2xl">Bangalore 560100</p>
+                                <p className="">Bangalore 560100</p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ export default function ContactMe({ }: Props) {
 
                         <textarea {...register("message")} placeholder="Message" className='contactInput' required />
 
-                        <button className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">Submit</button>
+                        <button className="bg-[#F7AB0A] md:py-5 py-4 px-10 rounded-md text-black font-bold text-lg">Submit</button>
                     </form>
 
                 </div>

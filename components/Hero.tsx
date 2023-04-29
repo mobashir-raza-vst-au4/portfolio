@@ -24,7 +24,7 @@ export default function Hero({ }: Props) {
             />
             <div className='z-20'>
                 <h2 className='text-gray-500 uppercase tracking-[15px] pb-2'>Software Developer</h2>
-                <h1 className='text-5xl font-semibold px-10'>
+                <h1 className='md:text-5xl text-lg font-semibold px-10'>
                     <span>{text}</span>
                     <Cursor cursorColor='red' />
                 </h1>
