@@ -73,7 +73,7 @@ export default function Projects({ }: Props) {
         duration: 1.5
       }}
       className="h-screen relative overflow-hidden flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl md:ml-0 ml-5">Projects</h3>
       <div className="md:w-[60%] w-[80%] z-20 md:mt-0 mt-12">
         <Slider {...settings}>
           {projectsData.map((project, index) => (

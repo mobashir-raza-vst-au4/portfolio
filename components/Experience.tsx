@@ -181,11 +181,11 @@ export default function Experience({ }: Props) {
                 duration: 1.5
             }}
             className='min-h-screen relative overflow-hidden flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center'>
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl md:ml-0 ml-5">
                 Experience
             </h3>
 
-            <div className='md:w-[60%] w-full md:mt-0 mt-40 tablet:px-12'>
+            <div className='md:w-[60%] w-screen md:mt-0 mt-40 tablet:px-8'>
                 <Slider {...settings}>
                     {
                         experienceData && experienceData.map((experience, index) => (

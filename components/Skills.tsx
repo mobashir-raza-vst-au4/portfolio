@@ -127,7 +127,7 @@ export default function Skills({ }: Props) {
                 duration: 1.5
             }}
             className='h-screen max-w-full relative flex flex-col text-center md:text-left xl:flex-row xl:px-10 xl:space-y-0 justify-center mx-auto items-center'>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl md:ml-0 ml-5'>
                 Skills
             </h3>
             <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">

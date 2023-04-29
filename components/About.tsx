@@ -13,8 +13,8 @@ export default function About({ }: Props) {
                 opacity: 1
             }}
             transition={{ duration: 1.5 }}
-            className="min-h-screen max-w-7xl relative flex flex-col justify-evenly mx-auto text-center items-center px-10 md:text-left md:flex-row">
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            className="min-h-screen max-w-7xl relative flex flex-col justify-evenly mx-auto text-center items-center px-5 md:px-10 md:text-left md:flex-row">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl md:ml-0 ml-5">
                 About
             </h3>
             <motion.img
