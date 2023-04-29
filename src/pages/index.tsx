@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="https://logowik.com/content/uploads/images/adobe-portfolio8664.jpg" />
       </Head>
-      <div className="bg-[rgb(36,36,36)] text-white min-h-screen snap-y snap-mandatory overflow-x-hidden z-0">
+      <div className="bg-[rgb(36,36,36)] text-white min-h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-hidden z-0">
         <Header />
         <section id="hero" className="snap-start">
           <Hero />
