@@ -67,7 +67,7 @@ export default function Header({ }: Props) {
                             transition={{
                                 duration: 1.5,
                             }}
-                            className='flex justify-center items-center gap-x-4 text-gray-300 cursor-pointer'>
+                            className='flex justify-center items-center text-gray-300 cursor-pointer'>
                             <SocialIcon
                                 className='cursor-pointer'
                                 network='email'
