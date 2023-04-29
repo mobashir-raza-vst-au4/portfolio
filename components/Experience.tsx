@@ -1,10 +1,24 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import ExperienceCard from './ExperienceCard'
+import Slider from "react-slick";
 
 type Props = {}
 
 export default function Experience({ }: Props) {
+    const settings = {
+        initialSlide: 0,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        // fade: true,
+        adaptiveHeight: true,
+    };
+
     const experienceData = [
         {
             id: 1,
@@ -65,7 +79,7 @@ export default function Experience({ }: Props) {
         {
             id: 2,
             company: 'HyScaler, formerly known as NetTantra Technologies',
-            role: 'Software Developer (Full-time)',
+            role: 'Software Developer (Full Time)',
             logo: 'tantralogo.png',
             technologies: [
                 {
@@ -171,13 +185,15 @@ export default function Experience({ }: Props) {
                 Experience
             </h3>
 
-            <div className='w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-                {
-                    experienceData && experienceData.map((experience, index) => (
-                        <ExperienceCard data={experience} />
-                    ))
+            <div className='md:w-[60%] w-full mt-32 tablet:px-12'>
+                <Slider {...settings}>
+                    {
+                        experienceData && experienceData.map((experience, index) => (
+                            <ExperienceCard data={experience} />
+                        ))
 
-                }
+                    }
+                </Slider>
             </div>
         </motion.div>
     )

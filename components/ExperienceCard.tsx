@@ -26,7 +26,7 @@ export default function ExperienceCard({ data }: ExperienceCardProps) {
   }
 
   return (
-    <article key={data.id} className='flex flex-col flex-shrink-0 items-center space-y-7 rounded-lg w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] text-gray-400 p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article key={data.id} className='flex flex-col flex-shrink-0 items-center space-y-7 rounded-lg bg-[#292929] text-gray-400 p-10'>
       <motion.img
         initial={{
           y: -100,
@@ -42,14 +42,14 @@ export default function ExperienceCard({ data }: ExperienceCardProps) {
         viewport={{
           once: true
         }}
-        className='w-16 h-16 rounded-full  object-cover object-center bg-white p-2'
+        className='w-16 h-16 rounded-full object-cover object-center bg-white p-2'
         src={data.logo}
       />
 
       <div className='px-0 md:px-10'>
         <h4 className='text-4xl font-light'>{data.role}</h4>
         <p className='text-2xl font-bold mt-1'>{data.company}</p>
-        <div className='flex flex-wrap my-2 gap-3'>
+        <div className='flex flex-wrap my-5 gap-3'>
           {/* Tech used */}
           {data.technologies.map((tech, index) => {
             return (

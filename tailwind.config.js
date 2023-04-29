@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'tablet': {max: '768px'},
+      }
+    },
   },
   plugins: [
     require('tailwind-scrollbar'),
