@@ -44,12 +44,12 @@ export default function ContactMe({ }: Props) {
     };
 
     return (
-        <div className='md:h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl md:px-10 px-5 justify-evenly mx-auto items-center md:mb-0 mb-12'>
+        <div className='min-h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl md:px-10 px-5 justify-evenly mx-auto items-center md:mb-0 mb-12'>
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl md:ml-0 ml-5">
                 Contact
             </h3>
 
-            <div className="flex flex-col md:space-y-24 space-y-12 mt-40 md:mt-0">
+            <div className="flex flex-col md:space-y-24 space-y-12 desktop:mt-40 md:mt-0">
                 <h4 className="md:text-4xl text-2xl font-semibold text-center">
                     I have got just what you need.{" "}
                     <span className="decoration-[#F7AB0A]/50 underline">Let's Talk.</span>

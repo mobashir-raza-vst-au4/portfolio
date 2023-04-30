@@ -134,7 +134,7 @@ export default function Skills({ }: Props) {
                 Hover over a skill for current proficiency
             </h3>
 
-            <div className='grid grid-cols-4 md:grid-cols-5 gap-5 md:mt-0 mt-12'>
+            <div className='grid grid-cols-4 md:grid-cols-5 gap-5 md:mt-0 desktop:mt-36 mobile-xs:mt-48 mobile-sm:mt-36'>
                 {
                     skillsData.map((skill, index) => {
                         return (

@@ -185,7 +185,7 @@ export default function Experience({ }: Props) {
                 Experience
             </h3>
 
-            <div className='md:w-[60%] w-screen md:mt-0 mt-40 tablet:px-8'>
+            <div className='md:w-[60%] w-screen md:mt-0 desktop:mt-40 tablet:px-8'>
                 <Slider {...settings}>
                     {
                         experienceData && experienceData.map((experience, index) => (

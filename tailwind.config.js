@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       screens: {
         'tablet': { max: '768px' },
+        'desktop': { max: '1280px' },
+        'mobile-xs': { min: '320px' },
+        'mobile-sm': { min: '360px' },
       }
     },
   },
