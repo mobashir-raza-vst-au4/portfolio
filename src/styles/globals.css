@@ -37,3 +37,7 @@
 .slick-dots li.slick-active button:before{
     color: #F7AB0A !important;
 }
+
+.custom__alert {
+    margin-top: 20px !important;
+}
