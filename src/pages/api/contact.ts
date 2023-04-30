@@ -6,7 +6,12 @@ type Data = {
   name: string
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+interface DictionaryObject {
+  success: boolean;
+  message: string;
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse<DictionaryObject>) {
   if (req.method === 'POST') {
     const data = req.body;
 
@@ -43,11 +48,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         `
       });
 
-      console.log("Message sent: %s", info.messageId);
+      // console.log("Message sent: %s", info.messageId);
 
       return res.status(200).json({ success: true, message: 'Mail Successfully Sent.' })
 
-    } catch (error) {
+    } catch (error: any) {
       return res.status(400).json({ success: false, message: error.message })
     }
   }
