@@ -20,7 +20,7 @@ export default function Hero({ }: Props) {
             <BackgroundCircles />
             <img
                 className='rounded-full relative h-32 w-32'
-                src="https://media.licdn.com/dms/image/C4E03AQFoRAatR_JwMw/profile-displayphoto-shrink_800_800/0/1628084618579?e=1685577600&v=beta&t=jLp2E1BZ-wQaEmTTdtH9FLOMqTy85BizKnoPWk0KEPg"
+                src="/profile.jpg"
             />
             <div className='z-20'>
                 <h2 className='text-gray-500 uppercase tracking-[15px] pb-2'>Software Developer</h2>

@@ -18,7 +18,7 @@ export default function About({ }: Props) {
                 About
             </h3>
             <motion.img
-                src="https://media.licdn.com/dms/image/C4E03AQFoRAatR_JwMw/profile-displayphoto-shrink_800_800/0/1628084618579?e=1685577600&v=beta&t=jLp2E1BZ-wQaEmTTdtH9FLOMqTy85BizKnoPWk0KEPg"
+                src="/profile.jpg"
                 initial={{
                     x: -200,
                     opacity: 0
